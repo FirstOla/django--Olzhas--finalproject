@@ -7,6 +7,6 @@ def index(request):
     return render (request, 'index.html', {'posts':ls})
 
 def about(request):
-    aboutPost=AboutUs.objects.all()
+    aboutPost=AboutUs.objects.last()
     return render (request, 'about.html', {'posts':aboutPost})
 # Create your views here.
